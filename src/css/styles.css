@@ -1,0 +1,20 @@
+body{
+    background-color: PapayaWhip;
+}
+div.jsbin.embedded > iframe{
+    min-height: 600px !important;
+}
+
+p{
+    font-size: larger;
+}
+
+code{
+    font-weight: bold;
+    color: blue;
+    font-size: x-large;
+}
+
+a.lesson.link{
+    display: block;
+}

@@ -1,0 +1,94 @@
+    <script>
+        var name = 'Jared Bobby';
+        var canW = 0;
+        var canH = 0;
+        var can = null;
+        var changeSize = false;
+        var minSize = 3;
+        var maxSize = 20;
+        var sizeChangeSpeed = .05;
+        
+        function startup(){
+            size = 8;
+            can = el('can');
+            
+            
+            drawSteve();
+            
+            //setInterval(moveSteve, 25);
+
+        }
+
+        function drawSteve(){
+            
+            if (changeSize){
+                if (size >= maxSize){
+                    sizeDir = -1;
+                }
+                if (size <= minSize){
+                    sizeDir = 1;
+                }
+                size = size + (sizeChangeSpeed * sizeDir);
+            }
+            
+            ctx.clearRect(0,0,can.width,can.height);
+            // hair
+            for(var x=1; x<9; x++){
+                drawSquare(x,1,'saddlebrown');
+                drawSquare(x,2,'saddlebrown');
+                if(x==1 || x==8){
+                    drawSquare(x,3,'saddlebrown');
+                }
+                else{
+                    drawSquare(x,3,'peachpuff');
+                }
+                drawSquare(x,4,'peachpuff');
+                drawSquare(x,5,'peachpuff');
+                drawSquare(x,6,'peachpuff');
+                drawSquare(x,7,'peachpuff');
+                drawSquare(x,8,'peachpuff');
+
+            }
+            
+            // eyes
+            drawSquare(3,5,'blue');
+            drawSquare(6,5,'blue');
+            drawSquare(2,5,'white');
+            drawSquare(7,5,'white');
+            
+            // nose
+            drawSquare(4,6,'chocolate');
+            drawSquare(5,6,'chocolate');
+            
+            // mouth/beard
+            drawSquare(3,7,'saddlebrown');
+//          drawSquare(4,7,'saddlebrown');
+//          drawSquare(5,7,'saddlebrown');
+            drawSquare(6,7,'saddlebrown');
+            drawSquare(3,8,'saddlebrown');
+            drawSquare(4,8,'saddlebrown');
+            drawSquare(5,8,'saddlebrown');
+            drawSquare(6,8,'saddlebrown');
+
+        }
+        
+        var dirX = 1; dirY = 1;
+        
+        function moveSteve(){
+            var steveW = 8;
+            var steveH = 8;
+            
+            // far
+            if (offX >= (can.width/size)-steveW-1) dirX = -1; 
+            if (offY >= (can.height/size)-steveH-1) dirY = -1; 
+
+            // near
+            if (offX <= -1) dirX = 1; 
+            if (offY <= -1) dirY = 1; 
+            offX += dirX;
+            offY += dirY;
+            drawSteve();
+        }
+        </script>
+
+    <script src="C:\Users\Spencer\Documents\Projects\Programming Club\Tdrive\goodies.js"></script>

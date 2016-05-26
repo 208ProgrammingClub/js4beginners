@@ -1,0 +1,28 @@
+HTML Panel
+
+• HTML is the display (or "view") language of the internet.
+• It's what a web page is created from.
+• Browsers (Chrome, Firefox, Safari, IE) know how to render (display) HTML.
+• The result shows off to the right in the "Output" panel.
+
+JavaScript Panel
+
+• This is where you write your CODE!
+• Code is written in the JavaScript language.
+• Web pages "come alive" with JavaScript.
+• JavaScript is a very powerful language.
+
+Console Panel
+
+• Where you print stuff you don't or can't display on your web page
+• Helps debug your JavaScript code
+• Helps you see what variables contain just by typing their name and pressing Enter
+• You can call functions on the fly from there
+
+Output Panel
+
+• The Output panel "renders" (displays) HTML.
+• It's kind of like a mini web browser.
+• You can click on buttons, etc. just like on a web page.
+• When you click things it can run JavaScript (if it's written correctly).
+
